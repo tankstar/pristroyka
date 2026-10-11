@@ -1,0 +1,105 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Пристройка-спальня — портал проекта</title><meta name="robots" content="noindex, nofollow">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Mono&family=PT+Sans+Narrow:wght@400;700&family=PT+Sans:wght@400;700&display=swap">
+<script type="module" src="https://unpkg.com/@google/model-viewer@3.4.0/dist/model-viewer.min.js"></script>
+<style>
+:root{--paper:#F3F4F2;--panel:#FFFFFF;--panel2:#F7F8F6;--ink:#1D2125;--muted:#5D656C;--line:#D8DCDD;--graphite:#2E3236;--hivis:#F2C200;--hivis-ink:#3A2E00;
+--f-display:'PT Sans Narrow','Arial Narrow',sans-serif;--f-body:'PT Sans',system-ui,sans-serif;--f-mono:'PT Mono',ui-monospace,monospace}
+@media (prefers-color-scheme: dark){:root{--paper:#16191B;--panel:#1F2326;--panel2:#24292D;--ink:#E9ECEE;--muted:#A1AAB1;--line:#343A3F;--graphite:#0E1012;color-scheme:dark}}
+*{box-sizing:border-box} [hidden]{display:none!important}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.5}
+header{background:var(--graphite);color:#F3F4F2;padding:14px 16px}
+header .in,main{max-width:1180px;margin:0 auto}
+header b{font-family:var(--f-display);font-size:28px;letter-spacing:.02em;display:block;line-height:1.1}
+header span{color:#B9C0C6;font-size:14px}
+.tape{height:7px;background:repeating-linear-gradient(135deg,var(--hivis) 0 14px,#2E3236 14px 28px)}
+main{padding:22px 16px 60px}
+h2{font-family:var(--f-display);font-size:26px;margin:34px 0 10px;text-wrap:balance}
+h3{font-family:var(--f-display);font-size:19px;margin:18px 0 8px;color:var(--muted,inherit)}
+.hero{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:22px;align-items:start}
+.compare{position:relative;aspect-ratio:3/4;border-radius:12px;overflow:hidden;border:1px solid var(--line);user-select:none;touch-action:none;max-width:100%}
+.compare img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.compare .after{clip-path:inset(0 0 0 50%)}
+.compare .handle{position:absolute;top:0;bottom:0;left:50%;width:3px;background:var(--hivis);transform:translateX(-1px)}
+.compare .handle::after{content:'⇆';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:var(--hivis);color:var(--hivis-ink);border-radius:999px;padding:6px 9px;font-weight:700}
+.compare .lbl{position:absolute;bottom:10px;font-size:12px;background:rgba(0,0,0,.6);color:#fff;padding:2px 8px;border-radius:999px}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:14px 0}
+.tile{border:1px solid var(--line);background:var(--panel);border-radius:10px;padding:12px}
+.tile .v{font-family:var(--f-display);font-size:28px;font-variant-numeric:tabular-nums;line-height:1.1}
+.tile .l{font-size:13px;color:var(--muted)}
+.lead{color:var(--muted);max-width:62ch}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
+a.card{display:flex;flex-direction:column;gap:6px;text-decoration:none;color:inherit;border:1px solid var(--line);background:var(--panel);border-radius:12px;padding:16px;min-height:150px}
+a.card:hover{border-color:var(--ink)} a.card:focus-visible{outline:2px solid var(--hivis);outline-offset:2px}
+a.card b{font-family:var(--f-display);font-size:21px}
+a.card p{margin:0;color:var(--muted);font-size:14.5px;flex:1}
+a.card span.go{font-weight:700;border-bottom:3px solid var(--hivis);align-self:flex-start}
+.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:10px}
+.gallery a{display:block;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--panel);color:inherit;text-decoration:none}
+.gallery img{display:block;width:100%;height:auto}
+.gallery span{display:block;padding:6px 10px;font-size:14px}
+.files{border:1px solid var(--line);border-radius:12px;background:var(--panel);overflow:hidden}
+.files a{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 12px;padding:10px 14px;border-bottom:1px solid var(--line);color:inherit;text-decoration:none}
+.files a:last-child{border-bottom:0} .files a:hover{background:var(--panel2)}
+.files b{font-weight:700} .files small{color:var(--muted)} .files code{font-family:var(--f-mono);font-size:13px;color:var(--muted)}
+.ar{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);gap:18px;align-items:start}
+model-viewer{width:100%;height:440px;background:var(--panel2);border:1px solid var(--line);border-radius:12px;--poster-color:transparent}
+.note{border-left:3px solid var(--hivis);background:var(--panel2);padding:8px 12px;font-size:14.5px;margin:8px 0}
+code.url{font-family:var(--f-mono);background:var(--hivis);color:var(--hivis-ink);padding:2px 7px;border-radius:5px;user-select:all}
+@media (max-width:820px){.hero,.ar{grid-template-columns:minmax(0,1fr)} model-viewer{height:360px}}
+</style></head><body>
+<header><div class="in"><b>Пристройка-спальня · timber frame</b><span>Портал проекта · 2950 × 4700 мм · цены на 2026-10-10</span></div></header>
+<div class="tape" aria-hidden="true"></div>
+<main>
+<section class="hero">
+  <div class="compare" id="cmp"><img src="viewer/img/photo_before.jpg" alt="Участок сейчас"><img class="after" src="viewer/img/photo_after.jpg" alt="С пристройкой"><div class="handle"></div><span class="lbl" style="left:10px">сейчас</span><span class="lbl" style="right:10px">после</span></div>
+  <div>
+    <h2 style="margin-top:0">Что будет построено</h2>
+    <p class="lead">Каркасная пристройка-спальня на существующем фундаменте: тёплая плоская кровля EPDM с уклоном к окну, фиброцементная облицовка антрацит, вход из прохода. Всё ниже построено из одной параметрической 3D-модели — размеры на чертежах, в смете и в модели совпадают.</p>
+    <div class="tiles">
+      <div class="tile"><div class="v">10.01 м²</div><div class="l">комната 2441×4101 мм</div></div>
+      <div class="tile"><div class="v">2500–2568</div><div class="l">потолок, мм</div></div>
+      <div class="tile"><div class="v">£12,131</div><div class="l">всего, с резервом 10%</div></div>
+      <div class="tile"><div class="v">30–40</div><div class="l">рабочих дней (1–2 чел.)</div></div>
+    </div>
+    <div class="note">Ссылка на этот сайт: <code class="url">https://tankstar.github.io/pristroyka/</code> — открывается с любого телефона, удобно смотреть на участке.</div>
+  </div>
+</section>
+
+<h2>Разделы</h2>
+<div class="cards">
+<a class="card" href="viewer/local.html?v=1791709471"><b>3D-модель</b><p>Каждая стойка, лага и лист отдельно. Ползунок этапов, слои, разрез, клик по детали — сечение и длина реза.</p><span class="go">Открыть модель →</span></a><a class="card" href="viewer/local.html%23steps"><b>Этапы строительства</b><p>14 этапов: шаги, проверки, когда звать Building Control, безопасность. Кнопка «В 3D» у каждого этапа.</p><span class="go">Читать этапы →</span></a><a class="card" href="viewer/local.html%23bom"><b>Смета и закупки</b><p>Материалы £9,368, всего с услугами и резервом £12,131. Ссылки на товары и альтернативы.</p><span class="go">Открыть смету →</span></a><a class="card" href="viewer/local.html%23cut"><b>Раскрой бруса</b><p>Какие доски покупать и как резать: каждая доска — полоса с кодами деталей.</p><span class="go">Открыть раскрой →</span></a><a class="card" href="viewer/local.html%23dwg"><b>Чертежи</b><p>8 листов A3: планы, фасады, разрезы, узлы, схемы панелей, электрика и отопление.</p><span class="go">Листы на экране →</span></a><a class="card" href="viewer/local.html%23calc"><b>Расчёты</b><p>U стены 0.173, кровли 0.144, пола 0.179; балки, лаги, теплопотери 557 Вт.</p><span class="go">Открыть расчёты →</span></a>
+</div>
+
+<h2>Пристройка в вашем саду (AR)</h2>
+<div class="ar">
+  <model-viewer src="ar/extension_ar.glb" alt="3D-модель пристройки" camera-controls auto-rotate shadow-intensity="1" exposure="1.05"
+    ar ar-modes="webxr scene-viewer quick-look" ar-scale="fixed" ar-placement="floor" camera-orbit="-35deg 70deg auto" touch-action="pan-y"></model-viewer>
+  <div>
+    <p>Модель в натуральную величину. На телефоне нажмите значок AR в углу окна модели и наведите камеру на газон: пристройка встанет на землю 1:1, вокруг неё можно ходить.</p>
+    <div class="note">iPhone: откроется Quick Look. Android: Scene Viewer или WebXR в Chrome.</div>
+    <p class="lead" style="font-size:14px">В AR-модели нет дома и гаража, только сама пристройка. Ставьте её так, чтобы левый задний угол упирался в угол дома.</p>
+  </div>
+</div>
+
+<h2>Рендеры</h2>
+<h3>Снаружи</h3><div class="gallery"><a href="viewer/img/garden_wide_s13.jpg?v=1791709470" target="_blank" rel="noopener"><img loading="lazy" src="viewer/img/garden_wide_s13.jpg?v=1791709470" alt="Общий вид"><span>Общий вид</span></a><a href="viewer/img/garden_s13.jpg?v=1791709470" target="_blank" rel="noopener"><img loading="lazy" src="viewer/img/garden_s13.jpg?v=1791709470" alt="Вид из сада"><span>Вид из сада</span></a><a href="viewer/img/patio_s13.jpg?v=1791709470" target="_blank" rel="noopener"><img loading="lazy" src="viewer/img/patio_s13.jpg?v=1791709470" alt="Со стороны патио"><span>Со стороны патио</span></a><a href="viewer/img/side_s13.jpg?v=1791709470" target="_blank" rel="noopener"><img loading="lazy" src="viewer/img/side_s13.jpg?v=1791709470" alt="С бокового прохода"><span>С бокового прохода</span></a><a href="viewer/img/aerial_s13.jpg?v=1791709470" target="_blank" rel="noopener"><img loading="lazy" src="viewer/img/aerial_s13.jpg?v=1791709470" alt="Сверху 3/4"><span>Сверху 3/4</span></a></div><h3>Внутри</h3><div class="gallery"><a href="viewer/img/interior_s13.jpg?v=1791709470" target="_blank" rel="noopener"><img loading="lazy" src="viewer/img/interior_s13.jpg?v=1791709470" alt="Спальня: от двери"><span>Спальня: от двери</span></a><a href="viewer/img/interior2_s13.jpg?v=1791709470" target="_blank" rel="noopener"><img loading="lazy" src="viewer/img/interior2_s13.jpg?v=1791709470" alt="Спальня: от окна"><span>Спальня: от окна</span></a><a href="viewer/img/window_view_s13.jpg?v=1791709470" target="_blank" rel="noopener"><img loading="lazy" src="viewer/img/window_view_s13.jpg?v=1791709470" alt="Вид из окна в сад"><span>Вид из окна в сад</span></a></div><h3>Стройка и разрезы</h3><div class="gallery"><a href="viewer/img/frame_s5_karkas.jpg?v=1791709470" target="_blank" rel="noopener"><img loading="lazy" src="viewer/img/frame_s5_karkas.jpg?v=1791709470" alt="Каркас и балки"><span>Каркас и балки</span></a><a href="viewer/img/frame_back_s6_krovlya.jpg?v=1791709471" target="_blank" rel="noopener"><img loading="lazy" src="viewer/img/frame_back_s6_krovlya.jpg?v=1791709471" alt="Кровля у стены дома"><span>Кровля у стены дома</span></a><a href="viewer/img/frame_s10_razrez.jpg?v=1791709471" target="_blank" rel="noopener"><img loading="lazy" src="viewer/img/frame_s10_razrez.jpg?v=1791709471" alt="Разрез на этапе коммуникаций"><span>Разрез на этапе коммуникаций</span></a><a href="viewer/img/cutaway_s12_razrez.jpg?v=1791709470" target="_blank" rel="noopener"><img loading="lazy" src="viewer/img/cutaway_s12_razrez.jpg?v=1791709470" alt="Разрез: все слои"><span>Разрез: все слои</span></a></div>
+
+<h2>Листы чертежей</h2>
+<div class="gallery">
+<a href="viewer/img/sheet01.jpg?v=1791709468" target="_blank" rel="noopener"><img loading="lazy" src="viewer/img/sheet01.jpg?v=1791709468" alt="Планы"><span>Лист 01 · Планы</span></a><a href="viewer/img/sheet02.jpg?v=1791709468" target="_blank" rel="noopener"><img loading="lazy" src="viewer/img/sheet02.jpg?v=1791709468" alt="Фундамент и пол"><span>Лист 02 · Фундамент и пол</span></a><a href="viewer/img/sheet03.jpg?v=1791709468" target="_blank" rel="noopener"><img loading="lazy" src="viewer/img/sheet03.jpg?v=1791709468" alt="Кровля"><span>Лист 03 · Кровля</span></a><a href="viewer/img/sheet04.jpg?v=1791709469" target="_blank" rel="noopener"><img loading="lazy" src="viewer/img/sheet04.jpg?v=1791709469" alt="Фасады"><span>Лист 04 · Фасады</span></a><a href="viewer/img/sheet05.jpg?v=1791709469" target="_blank" rel="noopener"><img loading="lazy" src="viewer/img/sheet05.jpg?v=1791709469" alt="Разрез А-А"><span>Лист 05 · Разрез А-А</span></a><a href="viewer/img/sheet06.jpg?v=1791709469" target="_blank" rel="noopener"><img loading="lazy" src="viewer/img/sheet06.jpg?v=1791709469" alt="Разрез Б-Б, узлы"><span>Лист 06 · Разрез Б-Б, узлы</span></a><a href="viewer/img/sheet07.jpg?v=1791709469" target="_blank" rel="noopener"><img loading="lazy" src="viewer/img/sheet07.jpg?v=1791709469" alt="Стеновые панели"><span>Лист 07 · Стеновые панели</span></a><a href="viewer/img/sheet08.jpg?v=1791709470" target="_blank" rel="noopener"><img loading="lazy" src="viewer/img/sheet08.jpg?v=1791709470" alt="Инженерные сети"><span>Лист 08 · Инженерные сети</span></a>
+</div>
+
+<h2>Файлы</h2>
+<div class="files">
+<a href="%D0%A7%D0%B5%D1%80%D1%82%D0%B5%D0%B6%D0%B8_RU.pdf?v=1791705395" target="_blank" rel="noopener"><div><b>Чертежи (русский)</b><br><small>PDF, 8 листов A3</small></div><code>0.4 МБ</code></a><a href="Drawings_EN.pdf?v=1791705399" target="_blank" rel="noopener"><div><b>Drawings (English)</b><br><small>для Building Control</small></div><code>0.3 МБ</code></a><a href="%D0%98%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%86%D0%B8%D1%8F_%D0%BF%D0%BE_%D1%8D%D1%82%D0%B0%D0%BF%D0%B0%D0%BC.pdf?v=1791709393" target="_blank" rel="noopener"><div><b>Инструкция по этапам</b><br><small>PDF для печати</small></div><code>19.8 МБ</code></a><a href="%D0%A1%D0%BC%D0%B5%D1%82%D0%B0_%D0%B8_%D0%BC%D0%B0%D1%82%D0%B5%D1%80%D0%B8%D0%B0%D0%BB%D1%8B.xlsx?v=1791705311" target="_blank" rel="noopener"><div><b>Смета Excel</b><br><small>7 листов, ссылки на товары</small></div><code>0.1 МБ</code></a><a href="%D0%A4%D0%BE%D1%82%D0%BE%D0%BC%D0%BE%D0%BD%D1%82%D0%B0%D0%B6.jpg?v=1791705273" target="_blank" rel="noopener"><div><b>Фотомонтаж</b><br><small>полный размер</small></div><code>1.1 МБ</code></a><a href="%D0%A4%D0%BE%D1%82%D0%BE_%D0%B4%D0%BE_%D0%B8_%D0%BF%D0%BE%D1%81%D0%BB%D0%B5.jpg?v=1791705273" target="_blank" rel="noopener"><div><b>Фото до и после</b><br><small>рядом</small></div><code>0.7 МБ</code></a><a href="%D0%9F%D1%80%D0%B8%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0_3D.glb?v=1791704242" target="_blank" rel="noopener"><div><b>Модель glTF</b><br><small>вся сцена</small></div><code>2.2 МБ</code></a><a href="ar/extension_ar.glb?v=1791704245" target="_blank" rel="noopener"><div><b>Модель для AR</b><br><small>только пристройка</small></div><code>1.1 МБ</code></a>
+</div>
+
+</main>
+<script>
+const cmp=document.getElementById('cmp'),after=cmp.querySelector('.after'),hd=cmp.querySelector('.handle');
+const setX=x=>{const r=cmp.getBoundingClientRect();const p=Math.min(1,Math.max(0,(x-r.left)/r.width));after.style.clipPath=`inset(0 0 0 ${p*100}%)`;hd.style.left=(p*100)+'%';};
+let drag=false;cmp.addEventListener('pointerdown',e=>{drag=true;cmp.setPointerCapture(e.pointerId);setX(e.clientX);});
+cmp.addEventListener('pointermove',e=>{if(drag)setX(e.clientX);});cmp.addEventListener('pointerup',()=>drag=false);
+</script>
+</body></html>
